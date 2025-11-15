@@ -66,4 +66,47 @@ Estructuras de Datos en Python
     + Diferencias clave frente a listas y tuplas: La principal diferencia entre los diccionarios y las listas/tuplas 
     radica en el modo de acceso y la estructura de los datos
     + Ejemplos:
-      + 
+      + Agregar:
+      ~~~
+      libro["editorial"] = "Editorial Sudamericana"
+      print(f"Después de agregar: {libro}")
+      ~~~
+      + Consultar:
+      ~~~
+      autor = libro["autor"]
+      paginas = libro["paginas"]
+      print(f"El autor es: {autor}")
+      print(f"Número de páginas: {paginas}")
+      ~~~
+      + Modificar:
+      ~~~
+      libro["año_publicacion"] = 1968
+      print(f"Después de modificar el año: {libro}")
+      ~~~
+      + Eliminar:
+      ~~~
+      paginas_eliminadas = libro.pop("paginas")
+      print(f"Páginas eliminadas: {paginas_eliminadas}")
+      ~~~
+4. Match-case
+    + Qué es y desde que version existe en python: El match-case es una estructura de control de flujo en Python 
+   utilizada para la comparación de patrones, el match-case fue introducido en Python a partir de la versión 3.10
+    + Para qué se usa: Se utiliza para tomar decisiones basadas en la estructura y el valor de los datos de entrada. 
+   En su forma más sencilla, compara una expresión con una serie de patrones definidos
+    + Diferencias entre 'if' y 'elif': Aunque tanto if/elif como match/case se utilizan para tomar decisiones, 
+   difieren en su enfoque y capacidad, el match/case se enfoca en la estructura de los datos como tuplas, listas, 
+   diccionarios y los if/elif se enfoca en sí una condición es True o False.
+    + Situaciones donde usarlo puede ser más claro: Manejo de comandos/opciones, desestructuración de Tuplas y Listas,
+   implementación de Máquinas de Estado
+    + Ejemplo:
+    ~~~
+    match data:
+        case 1:
+            print("Entra opcion 1")
+        case 2:
+            print("Entra opcion 2")
+        case 3:
+            print("Entra opcion 3")
+        case _:
+            print("Entra a opción base si no entra a ninguna otra antes")
+    ~~~
